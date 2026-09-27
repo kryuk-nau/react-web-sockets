@@ -3,10 +3,11 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
 
-const ws = ''; // Your implementation
+// Створюємо WebSocket-з'єднання
+const ws = new WebSocket('wss://boiling-beach-26008.herokuapp.com'); //[cite: 1]
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App ws={ws}/>
+    <App ws={ws} />
   </StrictMode>,
 );
